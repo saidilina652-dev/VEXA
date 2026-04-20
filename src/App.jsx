@@ -32,7 +32,7 @@ function App() {
        <Team />
       
       <Contact />
-      <section id="contact"></section>
+      
       
        
         <Footer />

@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import "./contact.css";
 
 export default function Contact() {
-
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,11 +43,10 @@ Message: ${message}`
 
   return (
     <section
+      id="contact"
       ref={sectionRef}
       className={`contact-section ${isVisible ? "fade-in" : ""}`}
     >
-      <section id="contact"></section>
-    
       <h2 className="contact-title">Contact Us</h2>
 
       <div className="contact-grid">
@@ -59,52 +57,47 @@ Message: ${message}`
             Have a project in mind? Send us a message and we will respond
             as soon as possible.
           </p>
-          <button className="about-badge"> what are you waiting for?! </button>
+          <button className="about-badge">
+            what are you waiting for?!
+          </button>
         </div>
 
-       <form className="contact-form" onSubmit={sendToWhatsapp}>
+        <form className="contact-form" onSubmit={sendToWhatsapp}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            minLength="4"
+            maxLength="20"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-  <input
-    type="text"
-    id="name"
-    name="name"
-      minLength="4"
-  maxLength="20"
-  size="10" 
-    placeholder="Your Name"
-    required
-    value={name}
-    onChange={(e) => setName(e.target.value)}
-  />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-  />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
 
-  <textarea
-    id="message"
-    name="message"
-    placeholder="Your Message"
-    rows="5"
-    required
-    value={message}
-    onChange={(e) => setMessage(e.target.value)}
-  />
-
-  <button className="sendd" type="submit">
-    Send Message
-  </button>
-
-</form>
+          <button className="sendd" type="submit">
+            Send Message
+          </button>
+        </form>
 
       </div>
-
     </section>
   );
 }

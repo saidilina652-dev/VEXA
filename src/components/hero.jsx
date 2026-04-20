@@ -4,7 +4,12 @@ import "./Hero.css";
 
 
 function HeroSection() {
-  
+  const scrollToContact = () => {
+  const section = document.getElementById("contact");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
   
@@ -20,7 +25,9 @@ function HeroSection() {
       return () => {
         if (currentSection) observer.unobserve(currentSection);
       };
+      
     }, []);
+    
   
     return (
       <section
@@ -30,12 +37,14 @@ function HeroSection() {
       >
       
       {/* المحتوى */}
-       <section id="home"></section>
+      
       <div className="hero-content">
         
         <h1 className="hero-title">From concept to success, We make it happen </h1>
         <p className="pre-title">Where Strategy Meets Impact And Your Digital Presence Dominates</p>
-        <button className="my-button">Let's Collaborate</button>
+  <button className="my-button" onClick={scrollToContact}>
+  Let's Collaborate
+</button>
       </div>
      
     </section>
