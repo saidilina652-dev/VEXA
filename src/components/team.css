@@ -16,12 +16,12 @@
   transform: translateY(0);
 }
 
-.about-badge {
+.about {
   padding: clamp(5px, 2vw, 15px) clamp(20px, 4vw, 40px);
   border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0);
   background: transparent;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   margin-bottom: 20px;
   cursor: pointer;
     font-family: "Betania Patmos", cursive;

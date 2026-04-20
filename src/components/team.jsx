@@ -105,7 +105,7 @@ export default function Services() {
       ref={sectionRef}
       className={`service-section ${isVisible ? "fade-in" : ""}`} 
       > 
-        <button className="about-badge">we present to you</button>
+        <button className="about">we present to you</button>
       <h2 className="service-title">Our Team</h2>
 
       <div className="slider">
