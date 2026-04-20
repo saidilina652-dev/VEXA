@@ -1,0 +1,109 @@
+.services-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  color: white;
+  
+} 
+
+.about-badge {
+  padding: clamp(5px, 2vw, 15px) clamp(20px, 4vw, 40px);
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+    font-family: "Betania Patmos", cursive;
+}
+
+.services-container {
+  text-align: center;
+  max-width: 1100px;
+  width: 100%;
+  z-index: 2;
+   font-family: "Archivo Black", sans-serif;
+
+}
+
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+   font-family: "Archivo Black", sans-serif;
+}
+.title {
+  animation: 
+             glow 1s infinite alternate;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #f8fbfc54;
+  margin-bottom: 50px;
+     font-family: "Betania Patmos", cursive;
+
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  font-size: 18px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  animation: 
+             glow 4s infinite alternate;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.service-card:hover {
+  transform: scale(0.98);
+}
+
+
+
+.service-card:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0);
+}
+
+
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ⭐️ Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    font-size: 16px;
+    padding: 18px;
+  }
+}

@@ -1,0 +1,142 @@
+/* HEADER */
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 30px;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.top-logo img {
+  width: auto;
+  cursor: pointer;
+  display: block;
+  width: 120px;
+  animation: float 3s ease-in-out infinite,
+             glow 2s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px rgba(255,255,255,0.5)); }
+  to { filter: drop-shadow(0 0 20px rgba(255,255,255,1)); }
+}
+
+.nav-container {
+  background: rgba(131, 130, 130, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 60px;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.top-icon img {
+  max-height: 60px;
+  width: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a:hover {
+  color: #3c2d5a;
+}
+.nav-links button{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Betania Patmos", cursive;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    gap: 20px;
+  }
+  .nav-links {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .top-icon {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.128);
+    width: 80%;
+      padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+    
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

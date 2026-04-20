@@ -1,0 +1,9 @@
+.aurora-container {
+  position: fixed;       /* يبقى ثابت في الخلفية */
+  top: 0;
+  left: 0;
+  width: 100vw;          /* يغطي كل عرض الشاشة */
+  height: 100vh;         /* يغطي كل طول الشاشة */
+  z-index: -1;           /* باش يكون تحت كل المحتوى */
+  overflow: hidden;
+}

@@ -1,0 +1,103 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  align-items: center;
+  padding: 40px 20px;
+ font-family: "Betania Patmos", cursive;
+  color: white;
+}
+
+/* LOGO */
+.footer-logo {
+  justify-self: start;   /* 👈 يجي لليسار */
+}
+
+.footer-logo img {
+  width: clamp(200px, 10vw, 200px);
+  animation: float 3s ease-in-out infinite,
+             glow 2s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px rgba(255,255,255,0.5)); }
+  to { filter: drop-shadow(0 0 20px rgba(255,255,255,1)); }
+}
+.footer-logo img {
+  transition: 0.4s ease;
+  /* ✨ تأثير اللمعان */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+/* CONTACT */
+.footer-contact {
+  text-align: center;    
+  font-family: "Betania Patmos", cursive;
+}
+
+.footer-contact h3 {
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.contact-item:hover {
+  color: #6c63ff;
+}
+
+/* FOLLOW */
+.footer-follow {
+  justify-self: end;   /* 👈 يجي لليمين */
+  text-align: right;
+  font-family: "Betania Patmos", cursive;
+
+}
+.follow-us {
+   transform: translate(-30px);
+    justify-self: end;   
+  text-align: right;
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.linkedin-btn:hover {
+  background: #48356da5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-logo,
+  .footer-follow {
+    justify-self: center;
+    text-align: center;
+  }
+}
