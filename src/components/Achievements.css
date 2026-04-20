@@ -45,12 +45,12 @@
 
 .achievements-marquee::before {
   left: 0;
-  background: linear-gradient(to right, #0000006f, transparent);
+  background: linear-gradient(to right, #00000000, transparent);
 }
 
 .achievements-marquee::after {
   right: 0;
-  background: linear-gradient(to left, #0000006f, transparent);
+  background: linear-gradient(to left, #00000000, transparent);
 }
 .stat {
  display: flex;
