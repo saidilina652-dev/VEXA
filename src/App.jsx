@@ -1,4 +1,4 @@
-import Aurora from "./components/aurora";
+import Aurora from "./components/Aurora";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import AboutSection from "./components/aboutsection";
