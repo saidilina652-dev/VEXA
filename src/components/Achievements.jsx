@@ -1,5 +1,5 @@
 import React from "react";
-import "./achievements.css";
+import "./Achievements.css";
 
 function Achievements() {
   const stats = [
