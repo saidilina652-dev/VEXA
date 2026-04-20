@@ -3,7 +3,7 @@ import "./Achievements.css";
 
 function Achievements() {
   const stats = [
-    { img: "/haddana.png", title: "Haddana Pharmacy", location: "Biskra" },
+    { img: "/haddana.png", title: "Haddana Pharmacy", location: "Biskra", desc: " Content Strategy / Content creation / Editing / Social media management from 700 followers to 20k" },
     { img: "/zouaoui.png", title: "Zouaoui Dental Clinic", location: "Batna" },
     { img: "/Aura.png", title: "Aura Clinic", location: "Batna" },
     { img: "/farmazone.png", title: "Farmazone", location: "Alger", desc: "UGC Content" },
